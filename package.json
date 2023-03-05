@@ -9,11 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.11",
     "@next/font": "13.1.6",
-    "eslint": "8.34.0",
+    "eslint": "8.22.0",
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-react": "^7.32.2"
+  },
+  "main": "index.js",
+  "author": "JJY <znrdlsxjspt1@gmail.com>",
+  "license": "MIT"
 }

@@ -1,14 +1,20 @@
-import './globals.css'
+'use client';
+import MobileNav from '@/app/mobileNav';
+import Nav from '@/app/nav';
+import Theme from '@/theme/theme';
+import { ThemeProvider, useMediaQuery, useTheme } from '@mui/material';
+import './globals.css';
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
-    </html>
-  )
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'),{defaultMatches:true});
+  return (<html lang='en'>
+  <head />
+  <body>
+  <ThemeProvider theme={Theme}>
+    {isMobile?<MobileNav />:<Nav />}
+    {children}
+  </ThemeProvider>
+  </body>
+  </html>);
 }
